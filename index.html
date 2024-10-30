@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <audio src="dnd.mp3" autoplay></audio>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title" id="title">D&D Session Recap with Jan.B</h1>
+      <p id="description">
+        Welcome, adventurer! We hope you enjoyed your recent journey through the
+        realms in our D&D session hosted by Jan.B! From epic battles to
+        mysterious encounters, each moment was crafted to bring the story to
+        life. Whether you braved dark dungeons, negotiated with curious NPCs, or
+        witnessed the unfolding of an unexpected twist, we'd love to know how it
+        went. Your feedback will help us make our future adventures even more
+        thrilling and immersive! Please take a few moments to rate different
+        aspects of the session and share any additional comments.
+      </p>
+      <form id="survey-form">
+        <fieldset>
+          <legend>Your Details</legend>
+          <label id="name-label">Enter your name: </label>
+          <input
+            placeholder="  Your Name"
+            required
+            type="text"
+            name="names"
+            id="name"
+          />
+          <label id="email-label">Enter your email: </label>
+          <input
+            placeholder="  Your email"
+            required
+            type="email"
+            name="mail"
+            id="email"
+          />
+          <label id="number-label">Enter your Birthday: </label>
+          <input class="age" type="date" name="age" id="date" />
+        </fieldset>
+        <fieldset>
+          <legend>Rating</legend>
+          <label for="dropdown"
+            >How would you rate the overall enjoyment of the session?</label
+          >
+          <select required name="rating" id="overall-rating">
+            <option value="">&nbsp;&nbsp;Please select an option</option>
+            <option value="1">&nbsp;&nbsp;1 (Did not enjoy)</option>
+            <option value="2">&nbsp;&nbsp;2</option>
+            <option value="3">&nbsp;&nbsp;3</option>
+            <option value="4">&nbsp;&nbsp;4</option>
+            <option value="5">&nbsp;&nbsp;5 (Absolutely loved it!)</option>
+          </select>
+          <label for="story-rating"
+            >How engaging was the story and world Jan B. created?</label
+          >
+          <select required name="story-rating" id="story-rating">
+            <option value="">&nbsp;&nbsp;Please select an option</option>
+            <option value="1">&nbsp;&nbsp;1 (Not engaging)</option>
+            <option value="2">&nbsp;&nbsp;2</option>
+            <option value="3">&nbsp;&nbsp;3</option>
+            <option value="4">&nbsp;&nbsp;4</option>
+            <option value="5">&nbsp;&nbsp;5 (Very immersive)</option>
+          </select>
+          <label for="balance-rating"
+            >How would you rate the balance of combat and role-play?</label
+          >
+          <select required name="balance-rating" id="balance-rating">
+            <option value="">&nbsp;&nbsp;Please select an option</option>
+            <option value="1">
+              &nbsp;&nbsp;1 (Too much combat / role-play imbalance)
+            </option>
+            <option value="2">&nbsp;&nbsp;2</option>
+            <option value="3">&nbsp;&nbsp;3</option>
+            <option value="4">&nbsp;&nbsp;4</option>
+            <option value="5">&nbsp;&nbsp;5 (Perfect balance)</option>
+          </select>
+          <label for="dm-rating"
+            >Was Jan B. effective in managing game flow and keeping players
+            engaged?</label
+          >
+          <select required name="dm-rating" id="dm-rating">
+            <option value="">&nbsp;&nbsp;Please select an option</option>
+            <option value="1">&nbsp;&nbsp;1 (Needs improvement)</option>
+            <option value="2">&nbsp;&nbsp;2</option>
+            <option value="3">&nbsp;&nbsp;3</option>
+            <option value="4">&nbsp;&nbsp;4</option>
+            <option value="5">&nbsp;&nbsp;5 (Very effective)</option>
+          </select>
+          <label for="teamwork-rating"
+            >Did the session encourage teamwork and interaction with other
+            players?</label
+          >
+          <select required name="teamwork-rating" id="teamwork-rating">
+            <option value="">&nbsp;&nbsp;Please select an option</option>
+            <option value="1">&nbsp;&nbsp;1 (Not much)</option>
+            <option value="2">&nbsp;&nbsp;2</option>
+            <option value="3">&nbsp;&nbsp;3</option>
+            <option value="4">&nbsp;&nbsp;4</option>
+            <option value="5">&nbsp;&nbsp;5 (Absolutely)</option>
+          </select>
+          <label for="future-rating"
+            >How likely are you to join another session with Jan B. as the
+            Dungeon Master?</label
+          >
+          <select required name="future-rating" id="future-rating">
+            <option value="">&nbsp;&nbsp;Please select an option</option>
+            <option value="1">&nbsp;&nbsp;1 (Not likely)</option>
+            <option value="2">&nbsp;&nbsp;2</option>
+            <option value="3">&nbsp;&nbsp;3</option>
+            <option value="4">&nbsp;&nbsp;4</option>
+            <option value="5">&nbsp;&nbsp;5 (Very likely)</option>
+          </select>
+        </fieldset>
+        <fieldset>
+          <legend>Do you want to send all your data to China?</legend>
+          <div class="radio-group">
+            <div>
+              <input
+                value="yes"
+                id="data-share-yes"
+                type="radio"
+                name="data-share"
+                required
+                checked
+              />
+              <label for="data-share-yes">Yes</label>
+            </div>
+            <div>
+              <input
+                value="no"
+                id="data-share-no"
+                type="radio"
+                name="data-share"
+                name="data-share"
+              />
+              <label for="data-share-no">Sure</label>
+            </div>
+            <div>
+              <input
+                value="perhaps"
+                id="data-share-perhaps"
+                type="radio"
+                name="data-share"
+              />
+              <label for="data-share-perhaps">Perhaps</label>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Other</legend>
+          <label>
+            <input value="spam" required type="checkbox" name="spam" /> I would
+            like to receive spam emails.
+          </label>
+          <label>
+            <input required value="wifi" type="checkbox" name="wifi" /> I would
+            like to order a new WI-FI router.
+          </label>
+          <label for="comments">Any other comments?</label>
+          <textarea
+            id="comments"
+            name="comments"
+            placeholder=" No, it was Perfect"
+          ></textarea>
+        </fieldset>
+        <input type="submit" id="submit" value="Send" />
+      </form>
+    </div>
+  </body>
+</html>
